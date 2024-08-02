@@ -1,0 +1,1821 @@
+{
+	"info": {
+		"_postman_id": "e47a13a3-4377-4bdb-b565-4cc9b3c174ab",
+		"name": "LiquidPay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1343687"
+	},
+	"item": [
+		{
+			"name": "clientes",
+			"item": [
+				{
+					"name": "cadastro",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Thiago RS",
+									"type": "text"
+								},
+								{
+									"key": "cpf",
+									"value": "93525550097",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "nn@nn.com",
+									"type": "text"
+								},
+								{
+									"key": "senha",
+									"value": "12_Thi55",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/clientes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "Thiago RS",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/clientes",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"clientes"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "Thiago RS",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 01 Aug 2024 00:49:25 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/7.4.20"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"cpf\": [\n            \"O campo cpf obrigatorio.\"\n        ],\n        \"email\": [\n            \"O campo email obrigatorio.\"\n        ],\n        \"senha\": [\n            \"O campo senha obrigatorio.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "cadastro de cliente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "Thiago RS",
+											"type": "text"
+										},
+										{
+											"key": "cpf",
+											"value": "93525550097",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "nn",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/clientes",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"clientes"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "Thiago RS",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 01 Aug 2024 01:10:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/7.4.20"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"email\": [\n            \"O email deve ser um endereço de e-mail válido.\"\n        ],\n        \"senha\": [\n            \"O campo senha obrigatorio.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "cadastro de cliente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "Thiago RS",
+											"type": "text"
+										},
+										{
+											"key": "cpf",
+											"value": "93525550097",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "nn@nn.com",
+											"type": "text"
+										},
+										{
+											"key": "senha",
+											"value": "12",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/clientes",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"clientes"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "Thiago RS",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 01 Aug 2024 01:27:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/7.4.20"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"senha\": [\n            \"O senha deve ter pelo menos 8 caracteres.\",\n            \"A senha deve conter pelo menos uma letra maiúscula, conter pelo menos uma letra minúscula, conter pelo menos um caractere especial.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "cadastro de cliente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "Thiago RS",
+											"type": "text"
+										},
+										{
+											"key": "cpf",
+											"value": "93525550097",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "nn@nn.com",
+											"type": "text"
+										},
+										{
+											"key": "senha",
+											"value": "12_Thi55",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/clientes",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"clientes"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "Thiago RS",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 01 Aug 2024 01:36:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/7.4.20"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"nome\": \"Thiago RS\",\n    \"cpf\": \"93525550097\",\n    \"email\": \"nn@nn.com\",\n    \"senha\": \"$2y$10$N1nsm/AHTUmgRqErkaMt4.C3lnqF9vffCpofWYxUmZPTiCx5fvLY6\",\n    \"updated_at\": \"2024-08-01T01:36:48.000000Z\",\n    \"created_at\": \"2024-08-01T01:36:48.000000Z\",\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "lista",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/clientes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "lista",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/clientes",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 01 Aug 2024 13:34:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/7.4.20"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nome\": \"Thiago RS\",\n        \"cpf\": \"93525550097\",\n        \"email\": \"nn@nn.com\",\n        \"telefone\": null,\n        \"data_nascimento\": null,\n        \"data_cadastro\": \"2024-07-31T00:00:00.000000Z\",\n        \"status\": 1,\n        \"observacoes\": null,\n        \"senha\": \"$2y$10$N1nsm/AHTUmgRqErkaMt4.C3lnqF9vffCpofWYxUmZPTiCx5fvLY6\",\n        \"created_at\": \"2024-08-01T01:36:48.000000Z\",\n        \"updated_at\": \"2024-08-01T01:36:48.000000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "usuario",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/clientes/{{user_id}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"clientes",
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "usuario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/clientes/{{user_id}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"clientes",
+										"{{user_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 01 Aug 2024 13:42:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/7.4.20"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nome\": \"Thiago RS\",\n    \"cpf\": \"93525550097\",\n    \"email\": \"nn@nn.com\",\n    \"telefone\": null,\n    \"data_nascimento\": null,\n    \"data_cadastro\": \"2024-07-31T00:00:00.000000Z\",\n    \"status\": 1,\n    \"observacoes\": null,\n    \"senha\": \"$2y$10$N1nsm/AHTUmgRqErkaMt4.C3lnqF9vffCpofWYxUmZPTiCx5fvLY6\",\n    \"created_at\": \"2024-08-01T01:36:48.000000Z\",\n    \"updated_at\": \"2024-08-01T01:36:48.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "alteração",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{host}}/api/clientes/{{user_id}}?nome=Thiago da Rocha",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"clientes",
+								"{{user_id}}"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Thiago da Rocha"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "alteração",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{host}}/api/clientes/{{user_id}}?nome=Thiago da Rocha",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"clientes",
+										"{{user_id}}"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "Thiago da Rocha"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 01 Aug 2024 14:29:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/7.4.20"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nome\": \"Thiago da Rocha\",\n    \"cpf\": \"93525550097\",\n    \"email\": \"nn@nn.com\",\n    \"telefone\": null,\n    \"data_nascimento\": null,\n    \"data_cadastro\": \"2024-07-31T00:00:00.000000Z\",\n    \"status\": 1,\n    \"observacoes\": null,\n    \"created_at\": \"2024-08-01T01:36:48.000000Z\",\n    \"updated_at\": \"2024-08-01T14:24:53.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/clientes/{{user_id}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"clientes",
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterarSenha",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/clientes/alterar-senha?nova_senha=12_Thi5522",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"clientes",
+								"alterar-senha"
+							],
+							"query": [
+								{
+									"key": "nova_senha",
+									"value": "12_Thi5522"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "alterarSenha",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/clientes/alterar-senha?nova_senha=12_Thi5522",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"clientes",
+										"alterar-senha"
+									],
+									"query": [
+										{
+											"key": "nova_senha",
+											"value": "12_Thi5522"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 01 Aug 2024 15:10:22 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/7.4.20"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Senha não pode ser reutilizada.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "contas",
+			"item": [
+				{
+					"name": "adicionarConta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/contas/adicionar",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"contas",
+								"adicionar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/contas/adicionar",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"contas",
+										"adicionar"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 01 Aug 2024 18:39:39 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/7.4.20"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Conta de pagamento criada com sucesso.\",\n    \"conta\": {\n        \"cliente_id\": 1,\n        \"saldo\": \"0.00\",\n        \"updated_at\": \"2024-08-01T18:39:41.000000Z\",\n        \"created_at\": \"2024-08-01T18:39:41.000000Z\",\n        \"id\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "adicionarCreditos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/contas/adicionar-creditos?type=debit&number=5460750905074011&brand=visa&valid=07/32&cvv=123&amount=0.01",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"contas",
+								"adicionar-creditos"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "debit"
+								},
+								{
+									"key": "number",
+									"value": "5460750905074011"
+								},
+								{
+									"key": "brand",
+									"value": "visa"
+								},
+								{
+									"key": "valid",
+									"value": "07/32"
+								},
+								{
+									"key": "cvv",
+									"value": "123"
+								},
+								{
+									"key": "amount",
+									"value": "0.01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "extrato",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/contas/extrato?inicio=2024-08-01&fim=2024-08-30",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"contas",
+								"extrato"
+							],
+							"query": [
+								{
+									"key": "inicio",
+									"value": "2024-08-01"
+								},
+								{
+									"key": "fim",
+									"value": "2024-08-30"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "estrato return",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/contas/extrato?inicio=2024-08-01&fim=2024-08-30",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"contas",
+										"extrato"
+									],
+									"query": [
+										{
+											"key": "inicio",
+											"value": "2024-08-01"
+										},
+										{
+											"key": "fim",
+											"value": "2024-08-30"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 02 Aug 2024 10:20:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/7.4.20"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Extrato consultado com sucesso.\",\n    \"conta\": {\n        \"id\": 2,\n        \"cliente_id\": 3,\n        \"nome_conta\": null,\n        \"status\": 1,\n        \"saldo\": \"28.04\",\n        \"limite_credito\": null,\n        \"descricao\": null,\n        \"tipo\": null,\n        \"created_at\": \"2024-08-02T08:56:28.000000Z\",\n        \"updated_at\": \"2024-08-02T09:52:14.000000Z\",\n        \"transacoes\": [\n            {\n                \"id\": 6,\n                \"tipo\": \"débito\",\n                \"data_transacao\": \"2024-08-02T06:06:49.000000Z\",\n                \"valor\": \"0.00\"\n            },\n            {\n                \"id\": 8,\n                \"tipo\": \"débito\",\n                \"data_transacao\": \"2024-08-02T06:26:14.000000Z\",\n                \"valor\": \"2.00\"\n            },\n            {\n                \"id\": 11,\n                \"tipo\": \"crédito\",\n                \"data_transacao\": \"2024-08-02T06:38:34.000000Z\",\n                \"valor\": \"0.02\"\n            },\n            {\n                \"id\": 12,\n                \"tipo\": \"crédito\",\n                \"data_transacao\": \"2024-08-02T06:42:10.000000Z\",\n                \"valor\": \"0.02\"\n            },\n            {\n                \"id\": 13,\n                \"tipo\": \"débito\",\n                \"data_transacao\": \"2024-08-02T06:52:14.000000Z\",\n                \"valor\": \"20.00\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "adicionarCreditos PIX",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/contas/adicionar-creditos?type=pix&chavepix=93525550080&amount=0.01",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"contas",
+								"adicionar-creditos"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "pix"
+								},
+								{
+									"key": "chavepix",
+									"value": "93525550080"
+								},
+								{
+									"key": "amount",
+									"value": "0.01"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "adicionarCreditos Pix",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/contas/adicionar-creditos?type=pix&chavepix=93525550080&amount=0.02",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"contas",
+										"adicionar-creditos"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "pix"
+										},
+										{
+											"key": "chavepix",
+											"value": "93525550080"
+										},
+										{
+											"key": "amount",
+											"value": "0.02"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 02 Aug 2024 09:42:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/7.4.20"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Créditos adicionados com sucesso.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "transferirSaldo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/contas/transferir-saldo?destinatario_cpf=93525550097&valor=200.00",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"contas",
+								"transferir-saldo"
+							],
+							"query": [
+								{
+									"key": "destinatario_cpf",
+									"value": "93525550097"
+								},
+								{
+									"key": "valor",
+									"value": "200.00"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "transferirSaldo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/contas/transferir-saldo?destinatario_cpf=93525550097&valor=200.00",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"contas",
+										"transferir-saldo"
+									],
+									"query": [
+										{
+											"key": "destinatario_cpf",
+											"value": "93525550097"
+										},
+										{
+											"key": "valor",
+											"value": "200.00"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 02 Aug 2024 09:29:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/7.4.20"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Saldo insuficiente.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response has the required fields - message and token\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(responseData).to.be.an('object');\r",
+							"    pm.expect(responseData.message).to.exist;\r",
+							"    pm.expect(responseData.token).to.exist;\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Message is a non-empty string\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(responseData.message).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Message should not be empty\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Token is a non-empty string\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(responseData.token).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Token should not be empty\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is within an acceptable range\", function () {\r",
+							"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "login",
+							"value": "{{login}}",
+							"type": "text"
+						},
+						{
+							"key": "senha",
+							"value": "{{senha}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Thiago RS",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login erro",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "login",
+									"value": "93525550096",
+									"type": "text"
+								},
+								{
+									"key": "senha",
+									"value": "12_Thi55",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"login"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Thiago RS",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 01 Aug 2024 11:33:48 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/7.4.20"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.20"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Invalid CPF, email, or password\"\n}"
+				},
+				{
+					"name": "login  certo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "login",
+									"value": "93525550097",
+									"type": "text"
+								},
+								{
+									"key": "senha",
+									"value": "12_Thi55",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"login"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Thiago RS",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 01 Aug 2024 11:35:39 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/7.4.20"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.20"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Login successful\",\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5vbWUiOiJUaGlhZ28gUlMiLCJjcGYiOiI5MzUyNTU1MDA5NyIsImVtYWlsIjoibm5Abm4uY29tIiwiaWF0IjoxNzIyNTEyMTQxLCJleHAiOjE3MjI1MTU3NDF9.kXuerhMDuEoa78p5YPrgqyaE6EjNbzOGGXHR3lG-bxw\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"let host = pm.collectionVariables.get(\"host\");\r",
+					"let login = pm.collectionVariables.get(\"login\");\r",
+					"let senha = pm.collectionVariables.get(\"senha\");\r",
+					"\r",
+					"let body = JSON.stringify({\r",
+					"    \"login\": login,\r",
+					"    \"senha\": senha\r",
+					"})\r",
+					"\r",
+					"const postRequest = {\r",
+					"  url: host + '/api/login',\r",
+					"  method: 'POST',\r",
+					"  timeout: 0,\r",
+					"  header: {\r",
+					"    \"Content-Type\": \"application/json\",\r",
+					"    \"Accept\": \"*/*\"\r",
+					"  },\r",
+					"  body: body\r",
+					"};\r",
+					"pm.sendRequest(postRequest, function (err, res) {\r",
+					"    if (err) {\r",
+					"        console.log(\"Error: \", err);\r",
+					"    } else if (res.code === 200) { // Verifica se a resposta é 200 OK\r",
+					"        console.log(\"Login Response: \", res);\r",
+					"        \r",
+					"        // Captura o token do corpo da resposta (ajuste conforme a estrutura do seu JSON)\r",
+					"        let jsonData = res.json();\r",
+					"        let token = jsonData.token; // Supondo que o token está no campo 'token'\r",
+					"\r",
+					"        // Armazena o token, login e senha em variáveis de coleção\r",
+					"        pm.collectionVariables.set('token', token);\r",
+					"        console.log(\"Token, login e senha armazenados com sucesso.\", token);\r",
+					"    } else {\r",
+					"        console.log(\"Falha no login. Status: \", res.code);\r",
+					"    }\r",
+					"});"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://liquidpay.local",
+			"type": "string"
+		},
+		{
+			"key": "login",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "senha",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "user_id",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
