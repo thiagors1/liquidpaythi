@@ -16,10 +16,6 @@ LiquidPay é uma solução de pagamento desenvolvida em Laravel, oferecendo func
 - **Gerenciamento de Saldo**: Clientes podem adicionar saldo e transferir para outras contas.
 - **Consulta de Extratos**: Histórico completo das transações realizadas.
 
-# LiquidPayTI
-
-Este é o repositório do projeto LiquidPayTI, uma aplicação desenvolvida em Laravel.
-
 ## Requisitos
 
 - PHP >= 8.2
@@ -32,21 +28,19 @@ Este é o repositório do projeto LiquidPayTI, uma aplicação desenvolvida em L
 
    ```bash
    git clone https://github.com/thiagors1/liquidpaythi.git
-cd liquidpaythi
+   cd liquidpaythi
 
 - Instale as dependências do Composer:
 
-    bash
-
-composer install
+    ```bash
+    composer install
 
 Configure o arquivo .env:
 
 Copie o arquivo .env.example para .env:
 
-bash
-
-cp .env.example .env
+    ```bash
+    cp .env.example .env
 
 Edite o arquivo .env com suas configurações de banco de dados e outras variáveis necessárias. Por exemplo:
 
@@ -61,9 +55,8 @@ DB_PASSWORD=senha
 
 Gere a chave de aplicação:
 
-bash
-
-php artisan key:generate
+    ```bash
+    php artisan key:generate
 
 Crie o banco de dados:
 
@@ -75,6 +68,5 @@ Crie o banco de dados:
 
 Execute as migrações:
 
-bash
-
-php artisan migrate
+    ```bash
+    php artisan migrate
