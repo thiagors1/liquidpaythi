@@ -54,12 +54,10 @@ Gere a chave de aplicação:
 
     php artisan key:generate
 
-Crie o banco de dados:
+- Crie o banco de dados:
 
-    No MySQL, você pode criar um banco de dados com o seguinte comando SQL:
-
-    sql
-
+No MySQL, você pode criar um banco de dados com o seguinte comando SQL:
+  sql
     CREATE DATABASE nome_do_banco;
 
 Execute as migrações:
