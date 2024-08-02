@@ -43,12 +43,12 @@ Copie o arquivo .env.example para .env:
 
 Edite o arquivo .env com suas configurações de banco de dados e outras variáveis necessárias. Por exemplo:
 
- DB_CONNECTION=mysql
- DB_HOST=127.0.0.1
- DB_PORT=3306
- DB_DATABASE=nome_do_banco
- DB_USERNAME=usuario
- DB_PASSWORD=senha
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=nome_do_banco
+    DB_USERNAME=usuario
+    DB_PASSWORD=senha
 
 Gere a chave de aplicação:
 
