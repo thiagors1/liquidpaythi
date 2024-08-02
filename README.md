@@ -57,7 +57,8 @@ Gere a chave de aplicação:
 - Crie o banco de dados:
 
 No MySQL, você pode criar um banco de dados com o seguinte comando SQL:
-  sql
+sql
+    
     CREATE DATABASE nome_do_banco;
 
 Execute as migrações:
